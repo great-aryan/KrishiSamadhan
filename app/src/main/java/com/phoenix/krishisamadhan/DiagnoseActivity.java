@@ -36,7 +36,16 @@ public class DiagnoseActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_diagnose);
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().hide();
+        }
 
+        gallery = findViewById(R.id.gallery);
+        predictbtn = findViewById(R.id.predictbtn);
+        aryan = findViewById(R.id.aryan);
+        camera = findViewById(R.id.camera);
+        result = findViewById(R.id.result);
+        imageObj = findViewById(R.id.imageObj);
         getPermission();
 
         String[] labels=new String[39];
@@ -53,13 +62,6 @@ public class DiagnoseActivity extends AppCompatActivity {
             throw new RuntimeException(e);
         }
 
-
-        gallery = findViewById(R.id.gallery);
-        predictbtn = findViewById(R.id.predictbtn);
-        aryan = findViewById(R.id.aryan);
-        camera = findViewById(R.id.camera);
-        result = findViewById(R.id.result);
-        imageObj = findViewById(R.id.imageObj);
 
         aryan.setOnClickListener(new View.OnClickListener() {
             @Override

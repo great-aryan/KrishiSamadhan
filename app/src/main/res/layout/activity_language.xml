@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LanguageActivity">
+    <TextView
+        android:id="@+id/languagewelcome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/welcomelang"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.05"/>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:layout_constraintTop_toBottomOf="@+id/languagewelcome"
+        app:layout_constraintVertical_bias="0.04"
+        android:layout_marginTop="100dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:context=".LanguageActivity"
+            app:layout_constraintTop_toBottomOf="@+id/languagewelcome">
+
+            <FrameLayout
+                android:id="@+id/hindicard"
+                android:layout_width="356dp"
+                android:layout_height="96dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/border"
+                android:alpha="0.8"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintVertical_bias="0.2">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="38dp"
+                    android:contentDescription="@string/todo"
+                    android:layout_marginTop="25sp"
+                    android:layout_marginStart="11dp"
+                    android:src="@drawable/hindiletter" />
+
+                <TextView
+                    android:id="@+id/hindititle"
+                    android:layout_width="181dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginStart="80dp"
+                    android:layout_marginTop="15dp"
+                    android:text="@string/Hindi"
+                    android:textColor="@color/black"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:id="@+id/hindiquote"
+                    android:layout_width="197dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="60dp"
+                    android:text="@string/hindides"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <ImageButton
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/radio_on_png"
+                    tools:ignore="ContentDescription">
+                </ImageButton>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/englishcard"
+                android:layout_width="354dp"
+                android:layout_height="92dp"
+                android:background="@drawable/border"
+                android:alpha="0.8"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/hindicard"
+                app:layout_constraintVertical_bias="0.03">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="38dp"
+                    android:layout_marginTop="25sp"
+                    android:layout_marginStart="11dp"
+                    android:contentDescription="@string/todo"
+                    android:src="@drawable/englishletter" />
+
+                <TextView
+                    android:id="@+id/englishtitle"
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginStart="80dp"
+                    android:layout_marginTop="15dp"
+                    android:text="@string/english"
+                    android:textColor="@color/black"
+                    android:textSize="25sp"/>
+
+                <TextView
+                    android:id="@+id/englishquote"
+                    android:layout_width="191dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="50dp"
+                    android:text="@string/englishdes"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <ImageButton
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/radio_off_png"
+                    tools:ignore="ContentDescription">
+                </ImageButton>
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/bengalicard"
+                android:layout_width="354dp"
+                android:layout_height="92dp"
+                android:background="@drawable/border"
+                android:alpha="0.8"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/englishcard"
+                app:layout_constraintVertical_bias="0.04">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="25sp"
+                    android:layout_marginStart="11dp"
+                    android:contentDescription="@string/todo"
+                    android:src="@drawable/bengaliletter" />
+
+                <TextView
+                    android:id="@+id/bengalititle"
+                    android:layout_width="181dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginStart="80dp"
+                    android:layout_marginTop="15dp"
+                    android:text="@string/bengalititle"
+                    android:textColor="@color/black"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:id="@+id/bengaliquote"
+                    android:layout_width="210dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="60dp"
+                    android:text="@string/bangalides"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <ImageButton
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/radio_off_png"
+                    tools:ignore="ContentDescription">
+                </ImageButton>
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/kannadcard"
+                android:layout_width="354dp"
+                android:layout_height="92dp"
+                android:background="@drawable/border"
+                android:alpha="0.8"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bengalicard"
+                app:layout_constraintVertical_bias="0.04">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="25sp"
+                    android:layout_marginStart="11dp"
+                    android:contentDescription="@string/todo"
+                    android:src="@drawable/kannadletter" />
+
+                <TextView
+                    android:id="@+id/kannadtitle"
+                    android:layout_width="181dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginStart="80dp"
+                    android:layout_marginTop="15dp"
+                    android:text="@string/kannadtitle"
+                    android:textColor="@color/black"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:id="@+id/kannadquote"
+                    android:layout_width="191dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="60dp"
+                    android:text="@string/kannadquote"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <ImageButton
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/radio_off_png"
+                    tools:ignore="ContentDescription">
+                </ImageButton>
+            </FrameLayout>
+
+            <FrameLayout
+            android:id="@+id/tamilcard"
+            android:layout_width="354dp"
+            android:layout_height="92dp"
+            android:background="@drawable/border"
+            android:alpha="0.8"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/kannadcard"
+            app:layout_constraintVertical_bias="0.06">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="25sp"
+                android:layout_marginStart="11dp"
+                android:contentDescription="@string/todo"
+                android:src="@drawable/tamilletter" />
+
+            <TextView
+                android:id="@+id/textView20"
+                android:layout_width="181dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginStart="80dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/tamiltitle"
+                android:textColor="@color/black"
+                android:textSize="25sp"/>
+
+                <TextView
+                    android:id="@+id/textView21"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="60dp"
+                    android:text="@string/tamilquote"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+            <ImageButton
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="end"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/radio_off_png"
+                tools:ignore="ContentDescription">
+            </ImageButton>
+        </FrameLayout>
+
+            <Button
+                android:id="@+id/languagebtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:text="@string/languagebtn"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tamilcard"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

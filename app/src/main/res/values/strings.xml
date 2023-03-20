@@ -1,9 +1,9 @@
 <resources>
     <string name="app_name">Krishi Samadhan</string>
     <string name="Title">कृषि समाधान</string>
-    <string name="captureimage">तस्वीर खींचो</string>
+    <string name="captureimage">तस्वीर खींचे</string>
     <string name="selectimage">तस्वीर चुनें</string>
-    <string name="predict">फसल की जाँच</string>
+    <string name="predict">जाँच शुरू करें</string>
     <string name="imageviewdesc">चुनी हुई फोटो यहां दिखाई देगी</string>
     <string name="results">परिणाम : ________</string>
     <string name="title_activity_home">HomeActivity</string>
@@ -18,4 +18,19 @@
     <string name="new_password">पासवर्ड</string>
     <string name="continue1">लॉग इन</string>
     <string name="skip">skip ></string>
+    <string name="welcomelang">नमस्ते !</string>
+    <string name="Hindi">हिंदी</string>
+    <string name="hindides">जय जवान जय किसान</string>
+    <string name="english">English</string>
+    <string name="englishdes">Farming is profession of hope</string>
+    <string name="languagebtn">भाषा चुनें</string>
+    <string name="bengalititle">বাংলা</string>
+    <string name="kannadtitle">ಕನ್ನಡ</string>
+    <string name="kannadquote">ಜೈ ಜವಾನ್ ಜೈ ಕಿಸಾನ್</string>
+    <string name="tamiltitle">தமிழ்</string>
+    <string name="tamilquote">ஜெய் ஜவான் ஜெய் கிசான்</string>
+    <string name="heal">अपनी फसल की जांच करें</string>
+    <string name="bangalides">জয় হোক যুবক, জয় হোক কৃষক</string>
+    <string name="checkuptext">क्या आपकी फसल ठीक है</string>
+    <string name="sol">समाधान</string>
 </resources>

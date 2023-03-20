@@ -15,7 +15,12 @@
         android:theme="@style/Theme.KrishiSamadhan"
         tools:targetApi="31">
         <activity
+            android:name=".LanguageActivity"
+            android:launchMode = "singleTop"
+            android:exported="false" />
+        <activity
             android:name=".LoginActivity"
+            android:launchMode = "singleTop"
             android:exported="false" />
         <activity
             android:name=".DiagnoseActivity"
