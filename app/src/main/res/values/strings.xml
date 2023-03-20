@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Krishi Samadhan</string>
+    <string name="Title">कृषि समाधान</string>
+    <string name="captureimage">तस्वीर खींचो</string>
+    <string name="selectimage">तस्वीर चुनें</string>
+    <string name="predict">फसल की जाँच</string>
+    <string name="imageviewdesc">चुनी हुई फोटो यहां दिखाई देगी</string>
+    <string name="results">परिणाम : ________</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
 </resources>
