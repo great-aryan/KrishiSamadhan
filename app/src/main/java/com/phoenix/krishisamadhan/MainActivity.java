@@ -23,6 +23,7 @@ import org.tensorflow.lite.Interpreter;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.nio.ByteBuffer;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -38,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
 
         getPermission();
 
-        String[] labels=new String[1001];
+        String[] labels=new String[39];
         int cnt=0;
         try {
             BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(getAssets().open("labels.txt")));
@@ -86,24 +87,51 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+//        predictbtn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                try {
+//                    MobilenetV110224Quant model = MobilenetV110224Quant.newInstance(MainActivity.this);
+//
+//                    // Creates inputs for reference.
+//                    TensorBuffer inputFeature0 = TensorBuffer.createFixedSize(new int[]{1, 256, 256, 3}, DataType.FLOAT32);
+//
+//                    bitmap = Bitmap.createScaledBitmap(bitmap, 512, 512, true);
+//
+//                    inputFeature0.loadBuffer(TensorImage.fromBitmap(bitmap).getBuffer());
+//
+//                    // Runs model inference and gets result.
+//                    MobilenetV110224Quant.Outputs outputs = model.process(inputFeature0);
+//                    TensorBuffer outputFeature0 = outputs.getOutputFeature0AsTensorBuffer();
+//
+//                    result.setText(getMax(outputFeature0.getFloatArray())+"");
+//                    // Releases model resources if no longer used.
+//                    model.close();
+//                } catch (IOException e) {
+//                    // TODO Handle the exception
+//                }
+//            }
+//        });
         predictbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                bitmap = Bitmap.createScaledBitmap(bitmap, 256, 256, true);
                 try {
-                    MobilenetV110224Quant model = MobilenetV110224Quant.newInstance(MainActivity.this);
+                    MobilenetV110224Quant model = MobilenetV110224Quant.newInstance(getApplicationContext());
 
                     // Creates inputs for reference.
-                    TensorBuffer inputFeature0 = TensorBuffer.createFixedSize(new int[]{1, 224, 224, 3}, DataType.UINT8);
+                    TensorBuffer inputFeature0 = TensorBuffer.createFixedSize(new int[]{1, 256, 256, 3}, DataType.FLOAT32);
+                    TensorImage tensorImage = new TensorImage(DataType.FLOAT32);
+                    tensorImage.load(bitmap);
 
-                    bitmap = Bitmap. createScaledBitmap(bitmap, 224, 224, true);
-
-                    inputFeature0.loadBuffer(TensorImage.fromBitmap(bitmap).getBuffer());
+                    ByteBuffer byteBuffer = tensorImage.getBuffer();
+                   inputFeature0.loadBuffer(byteBuffer);
 
                     // Runs model inference and gets result.
                     MobilenetV110224Quant.Outputs outputs = model.process(inputFeature0);
                     TensorBuffer outputFeature0 = outputs.getOutputFeature0AsTensorBuffer();
 
-                    result.setText(labels[getMax(outputFeature0.getFloatArray())]+"");
+                    result.setText("परिणाम : "+labels[getMax(outputFeature0.getFloatArray())]+" ");
                     // Releases model resources if no longer used.
                     model.close();
                 } catch (IOException e) {
