@@ -38,6 +38,19 @@ public class MainActivity extends AppCompatActivity {
 
         getPermission();
 
+        String[] labels=new String[1001];
+        int cnt=0;
+        try {
+            BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(getAssets().open("labels.txt")));
+            String line=bufferedReader.readLine();
+            while (line!=null){
+                labels[cnt]=line;
+                cnt++;
+                line=bufferedReader.readLine();
+            }
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
 
 
         gallery = findViewById(R.id.gallery);
@@ -90,7 +103,7 @@ public class MainActivity extends AppCompatActivity {
                     MobilenetV110224Quant.Outputs outputs = model.process(inputFeature0);
                     TensorBuffer outputFeature0 = outputs.getOutputFeature0AsTensorBuffer();
 
-                    result.setText(getMax(outputFeature0.getFloatArray())+"");
+                    result.setText(labels[getMax(outputFeature0.getFloatArray())]+"");
                     // Releases model resources if no longer used.
                     model.close();
                 } catch (IOException e) {
