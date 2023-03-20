@@ -10,4 +10,12 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+    <string name="plant">plantgif</string>
+    <string name="todo">todo</string>
+    <string name="welcome">कृषि समाधान से जुड़ें</string>
+    <string name="or">or</string>
+    <string name="email">ईमेल</string>
+    <string name="new_password">पासवर्ड</string>
+    <string name="continue1">लॉग इन</string>
+    <string name="skip">skip ></string>
 </resources>
