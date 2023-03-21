@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "994442511807",
+    "project_id": "krishi-samadhan-81498",
+    "storage_bucket": "krishi-samadhan-81498.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:994442511807:android:f2cec004f44b0fb7210d0a",
+        "android_client_info": {
+          "package_name": "com.phoenix.krishisamadhan"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "994442511807-2kncn16h6mkmhb1am91jloonsq9s7787.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.phoenix.krishisamadhan",
+            "certificate_hash": "3a59a8a36f1b371332284da265282953f134ecde"
+          }
+        },
+        {
+          "client_id": "994442511807-qrjnlquuj4hm0k3h9ntlp3393plo58co.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBBCvgaiOuRM0BMQaMZ5xoanY33WnCNXIo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "994442511807-qrjnlquuj4hm0k3h9ntlp3393plo58co.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

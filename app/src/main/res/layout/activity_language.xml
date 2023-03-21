@@ -77,12 +77,13 @@
                     android:textStyle="bold" />
 
                 <ImageButton
+                    android:id="@+id/hindisel"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:layout_gravity="end"
                     android:layout_marginTop="30dp"
                     android:layout_marginEnd="10dp"
-                    android:background="@drawable/radio_on_png"
+                    android:background="@drawable/radio_off_png"
                     tools:ignore="ContentDescription">
                 </ImageButton>
 
@@ -130,6 +131,7 @@
                     android:textStyle="bold" />
 
                 <ImageButton
+                    android:id="@+id/engsel"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:layout_gravity="end"

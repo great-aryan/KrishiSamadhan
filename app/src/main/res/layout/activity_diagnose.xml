@@ -5,7 +5,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#A9D3E6"
     tools:context=".DiagnoseActivity">
+
+  <Button
+      android:id="@+id/Logout"
+      android:layout_toEndOf="@id/predictbtn"
+      android:layout_width="120dp"
+      android:layout_height="55dp"
+      android:layout_marginTop="24dp"
+      android:backgroundTint="@color/bg_color"
+      android:textColor="@color/black"
+      android:text="@string/logout" />
+
   <TextView
       android:id="@+id/title"
       android:layout_width="match_parent"
@@ -29,12 +41,13 @@
   <FrameLayout
       android:id="@+id/Diagnose"
       android:layout_width="match_parent"
-      android:layout_height="200dp"
-      android:layout_marginStart="10dp"
-      android:layout_marginEnd="10dp"
+      android:layout_height="150dp"
+      android:layout_marginStart="20dp"
+      android:layout_marginEnd="20dp"
       android:layout_marginTop="10dp"
       android:layout_below="@+id/hline"
       android:background="@drawable/border2"
+      android:backgroundTint="@color/green_200"
       android:alpha="0.9">
     <TextView
         android:id="@+id/checkup"
@@ -50,10 +63,10 @@
         android:id="@+id/gallery"
         android:layout_width="match_parent"
         android:layout_marginTop="40dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_height="70dp"
-        android:textSize="30sp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_height="45dp"
+        android:textSize="18sp"
         android:background="@drawable/border"
         android:text="@string/selectimage"
         />
@@ -62,30 +75,48 @@
         android:id="@+id/camera"
         android:background="@drawable/border"
         android:layout_width="match_parent"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_height="70dp"
-        android:layout_marginTop="120dp"
-        android:textSize="30sp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="90dp"
+        android:textSize="18sp"
         android:text="@string/captureimage" />
 
   </FrameLayout>
 
   <ImageView
       android:id="@+id/imageObj"
-      android:layout_width="100dp"
-      android:layout_height="100dp"
-      android:background="@drawable/border"
+      android:layout_width="220dp"
+      android:layout_height="170dp"
+      android:background="@drawable/border1"
       android:layout_below="@id/Diagnose"
       android:autofillHints="Image will appear here"
       android:layout_centerHorizontal="true"
       android:layout_marginTop="10dp"
       android:contentDescription="@string/imageviewdesc"
+      android:elevation="1000dp"
       />
+
+  <TextView
+      android:id="@+id/imgtxt"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignStart="@+id/imageObj"
+      android:layout_alignTop="@+id/imageObj"
+      android:layout_alignEnd="@+id/imageObj"
+      android:layout_alignBottom="@+id/imageObj"
+      android:layout_marginStart="40dp"
+      android:layout_marginTop="40dp"
+      android:layout_marginEnd="40dp"
+      android:layout_marginBottom="40dp"
+      android:gravity="center"
+      android:text="@string/imgtxt"
+      android:textColor="#000000"
+      android:textSize="18sp" />
   <Button
       android:id="@+id/predictbtn"
       android:layout_width="200dp"
-      android:layout_height="60dp"
+      android:layout_height="50dp"
       android:layout_below="@id/imageObj"
       android:layout_centerHorizontal="true"
       android:layout_marginTop="20dp"
@@ -93,17 +124,23 @@
       android:background="@drawable/border"
       android:textSize="20sp"
       />
+
   <TextView
       android:id="@+id/result"
       android:layout_width="match_parent"
-      android:layout_height="40dp"
-      android:text="@string/results"
+      android:layout_height="90dp"
       android:layout_below="@id/predictbtn"
+      android:layout_margin="20dp"
+      android:layout_marginStart="10dp"
+      android:layout_marginTop="10dp"
+      android:layout_marginEnd="10dp"
+      android:layout_marginBottom="10dp"
+      android:background="@drawable/border2"
+      android:paddingStart="15dp"
+      android:paddingEnd="15dp"
+      android:text="@string/results"
       android:textColor="@color/black"
-      android:textSize="20sp"
-      android:textAlignment="center"
-      android:layout_marginTop="50dp"
-      />
+      android:textSize="20sp" />
 
 <!--    <TextView-->
 <!--      android:id="@+id/heal"-->
@@ -121,13 +158,28 @@
 
   <Button
       android:id="@+id/aryan"
-      android:layout_width="wrap_content"
+      android:layout_width="140dp"
       android:layout_height="wrap_content"
       android:layout_below="@id/result"
       android:layout_centerHorizontal="true"
-      android:layout_marginTop="20dp"
+      android:textSize="18sp"
       android:text="@string/sol"
       />
+
+  <TextView
+      android:id="@+id/solu"
+      android:layout_width="match_parent"
+      android:layout_height="80dp"
+      android:layout_below="@id/aryan"
+      android:layout_marginStart="20dp"
+      android:layout_marginTop="20dp"
+      android:layout_marginEnd="20dp"
+      android:layout_marginBottom="20dp"
+      android:background="@drawable/border2"
+      android:paddingStart="15dp"
+      android:paddingEnd="15dp"
+      android:textColor="@color/black"
+      android:textSize="20sp" />
 
 
 

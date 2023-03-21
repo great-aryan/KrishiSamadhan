@@ -1,38 +1,38 @@
-Apple Apple scab
-Apple Black rot
-Apple Cedar apple rust
-Apple healthy
-Blueberry healthy
-Cherry(including sour) Powdery mildew
-Cherry(including sour) healthy     
-Corn(maize) Cercospora leaf spot Gray leaf spot 
-Corn(maize) Common rust     
-Corn (maize) Northern Leaf Blight   
-Corn(maize) healthy      
-Grape Black rot     
-Grape Esca(Black Measles)     
-Grape Leaf blight(Isariopsis Leaf Spot)   
-Grape healthy      
-Orange Haunglongbing(Citrus greening)     
-Peach Bacterial spot     
-Peach healthy      
-Pepper bell Bacterial spot    
-Pepper bell healthy     
-Potato Early blight     
-Potato Late blight     
-Potato healthy      
-Raspberry healthy
-Soybean healthy
-Squash Powdery mildew     
-Strawberry Leaf scorch     
-Strawberry healthy      
-Tomato Bacterial spot     
-Tomato Early blight     
-Tomato Late blight     
-Tomato Leaf Mold     
-Tomato Septoria leaf spot    
-Tomato Spider mites Two-spotted spider mite  
-Tomato Target Spot     
-Tomato Tomato Yellow Leaf Curl Virus  
-Tomato Tomato mosaic virus    
-Tomato healthy
+इसमें सेब की खुरपी पाया गया है | कारण : सेब पपड़ी रोग का कारण फफूंद वेंचुरिया इनेक्वालिस है।
+काला सड़ा हुआ सेब |  कारण : काला सड़न सेब का एक रोग है जो बोट्रीओस्फेरिया ओबटुसा नामक कवक के कारण होता है
+देवदार सेब जंग पाया गया है
+सेब स्वस्थ  है
+ब्लूबेरी स्वस्थ  है
+चेरी (खट्टा सहित) ख़स्ता फफूंदी  पाया गया है
+चेरी (खट्टा सहित) स्वस्थ  पाया गया है
+मकई (मक्का) सर्कोस्पोरा लीफ स्पॉट ग्रे लीफ स्पॉट
+मकई (मक्का) आम जंग  पाया गया है
+मकई (मक्का) उत्तरी पत्ता झुलसा  पाया गया है
+मकई (मक्का) स्वस्थ  है
+अंगूर काला सड़ांध  पाया गया है
+अंगूर एस्का (काला खसरा)  पाया गया है
+अंगूर की पत्ती का झुलसा रोग (इसारियोप्सिस लीफ स्पॉट)  पाया गया है
+अंगूर स्वस्थ  है
+ऑरेंज हॉन्ग्लोंगबिंग (साइट्रस ग्रीनिंग)  पाया गया है
+पीच बैक्टीरियल स्पॉट  पाया गया है
+आड़ू स्वस्थ  है 
+काली मिर्च बेल बैक्टीरियल स्पॉट  पाया गया है
+काली मिर्च बेल स्वस्थ  पाया गया है
+आलू अर्ली ब्लाइट  पाया गया है
+आलू लेट ब्लाइट  पाया गया है
+आलू स्वस्थ  है 
+रास्पबेरी स्वस्थ  पाया गया है
+सोयाबीन स्वस्थ  पाया गया है
+स्क्वैश ख़स्ता फफूंदी  पाया गया है
+स्ट्राबेरी पत्ता झुलसा  पाया गया है
+स्ट्रॉबेरी स्वस्थ  है 
+टमाटर बैक्टीरियल स्पॉट  पाया गया है
+टमाटर अर्ली ब्लाइट  पाया गया है
+टमाटर लेट ब्लाइट  पाया गया है
+टमाटर का पत्ता मोल्ड  पाया गया है
+टमाटर सेप्टोरिया लीफ स्पॉट  पाया गया है
+टोमैटो स्पाइडर माइट्स टू-स्पॉटेड स्पाइडर माइट्स  पाया गया है
+टमाटर लक्ष्य स्थान  पाया गया है
+टमाटर टमाटर पीला पत्ता कर्ल वायरस  पाया गया है
+टमाटर टमाटर मोज़ेक वायरस  पाया गया है
+टमाटर स्वस्थ  है

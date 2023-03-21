@@ -14,11 +14,15 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
+
+import com.google.firebase.auth.FirebaseAuth;
 import com.phoenix.krishisamadhan.ml.MobilenetV110224Quant;
 import org.tensorflow.lite.DataType;
 import org.tensorflow.lite.support.image.TensorImage;
 import org.tensorflow.lite.support.tensorbuffer.TensorBuffer;
 import android.content.res.AssetManager;
+import android.widget.Toast;
+
 import org.tensorflow.lite.Interpreter;
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -27,8 +31,8 @@ import java.nio.ByteBuffer;
 
 public class DiagnoseActivity extends AppCompatActivity {
 
-    Button camera, predictbtn, aryan, gallery;
-    TextView result;
+    Button camera, predictbtn, aryan, gallery, btn;
+    TextView result, imgtxt, solu;
     ImageView imageObj;
     Bitmap bitmap;
 
@@ -39,13 +43,37 @@ public class DiagnoseActivity extends AppCompatActivity {
         if (getSupportActionBar() != null) {
             getSupportActionBar().hide();
         }
+        btn=(Button)findViewById(R.id.Logout);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FirebaseAuth.getInstance().signOut();
+                finish();
+            }
+        });
 
         gallery = findViewById(R.id.gallery);
         predictbtn = findViewById(R.id.predictbtn);
         aryan = findViewById(R.id.aryan);
         camera = findViewById(R.id.camera);
         result = findViewById(R.id.result);
+        solu = findViewById(R.id.solu);
         imageObj = findViewById(R.id.imageObj);
+        imgtxt = findViewById(R.id.imgtxt);
+        int counter = 2;
+        float v = 0;
+
+
+
+        predictbtn.setTranslationX(400);
+        imageObj.setTranslationY(300);
+
+        predictbtn.setAlpha(v);
+        imageObj.setAlpha(v);
+
+
+        predictbtn.animate().translationX(0).alpha(1).setDuration(500).setStartDelay(200).start();
+        imageObj.animate().translationY(0).alpha(1).setDuration(500).setStartDelay(300).start();
         getPermission();
 
         String[] labels=new String[39];
@@ -66,7 +94,8 @@ public class DiagnoseActivity extends AppCompatActivity {
         aryan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(DiagnoseActivity.this, HomeActivity.class));
+                solu.setText("परिणाम : "+labels);
+
             }
         });
 
@@ -89,55 +118,34 @@ public class DiagnoseActivity extends AppCompatActivity {
             }
         });
 
-//        predictbtn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                try {
-//                    MobilenetV110224Quant model = MobilenetV110224Quant.newInstance(MainActivity.this);
-//
-//                    // Creates inputs for reference.
-//                    TensorBuffer inputFeature0 = TensorBuffer.createFixedSize(new int[]{1, 256, 256, 3}, DataType.FLOAT32);
-//
-//                    bitmap = Bitmap.createScaledBitmap(bitmap, 512, 512, true);
-//
-//                    inputFeature0.loadBuffer(TensorImage.fromBitmap(bitmap).getBuffer());
-//
-//                    // Runs model inference and gets result.
-//                    MobilenetV110224Quant.Outputs outputs = model.process(inputFeature0);
-//                    TensorBuffer outputFeature0 = outputs.getOutputFeature0AsTensorBuffer();
-//
-//                    result.setText(getMax(outputFeature0.getFloatArray())+"");
-//                    // Releases model resources if no longer used.
-//                    model.close();
-//                } catch (IOException e) {
-//                    // TODO Handle the exception
-//                }
-//            }
-//        });
         predictbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                bitmap = Bitmap.createScaledBitmap(bitmap, 256, 256, true);
-                try {
-                    MobilenetV110224Quant model = MobilenetV110224Quant.newInstance(getApplicationContext());
+                if (bitmap != null) {
+                    bitmap = Bitmap.createScaledBitmap(bitmap, 256, 256, true);
+                    try {
+                        MobilenetV110224Quant model = MobilenetV110224Quant.newInstance(getApplicationContext());
 
-                    // Creates inputs for reference.
-                    TensorBuffer inputFeature0 = TensorBuffer.createFixedSize(new int[]{1, 256, 256, 3}, DataType.FLOAT32);
-                    TensorImage tensorImage = new TensorImage(DataType.FLOAT32);
-                    tensorImage.load(bitmap);
+                        // Creates inputs for reference.
+                        TensorBuffer inputFeature0 = TensorBuffer.createFixedSize(new int[]{1, 256, 256, 3}, DataType.FLOAT32);
+                        TensorImage tensorImage = new TensorImage(DataType.FLOAT32);
+                        tensorImage.load(bitmap);
 
-                    ByteBuffer byteBuffer = tensorImage.getBuffer();
-                    inputFeature0.loadBuffer(byteBuffer);
+                        ByteBuffer byteBuffer = tensorImage.getBuffer();
+                        inputFeature0.loadBuffer(byteBuffer);
 
-                    // Runs model inference and gets result.
-                    MobilenetV110224Quant.Outputs outputs = model.process(inputFeature0);
-                    TensorBuffer outputFeature0 = outputs.getOutputFeature0AsTensorBuffer();
+                        // Runs model inference and gets result.
+                        MobilenetV110224Quant.Outputs outputs = model.process(inputFeature0);
+                        TensorBuffer outputFeature0 = outputs.getOutputFeature0AsTensorBuffer();
 
-                    result.setText("परिणाम : "+labels[getMax(outputFeature0.getFloatArray())]+" ");
-                    // Releases model resources if no longer used.
-                    model.close();
-                } catch (IOException e) {
-                    // TODO Handle the exception
+                        result.setText("परिणाम : " + labels[getMax(outputFeature0.getFloatArray())] + " ");
+                        // Releases model resources if no longer used.
+                        model.close();
+                    } catch (IOException e) {
+                        Toast.makeText(DiagnoseActivity.this, "पहले फोटो अपलोड करें", Toast.LENGTH_SHORT).show();
+                    }
+                } else {
+                    Toast.makeText(DiagnoseActivity.this, "पहले फोटो अपलोड करें", Toast.LENGTH_SHORT).show();
                 }
             }
         });

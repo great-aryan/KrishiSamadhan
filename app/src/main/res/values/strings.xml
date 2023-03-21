@@ -5,7 +5,7 @@
     <string name="selectimage">तस्वीर चुनें</string>
     <string name="predict">जाँच शुरू करें</string>
     <string name="imageviewdesc">चुनी हुई फोटो यहां दिखाई देगी</string>
-    <string name="results">परिणाम : ________</string>
+    <string name="results">परिणाम :</string>
     <string name="title_activity_home">HomeActivity</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
@@ -14,9 +14,9 @@
     <string name="todo">todo</string>
     <string name="welcome">कृषि समाधान से जुड़ें</string>
     <string name="or">or</string>
-    <string name="email">ईमेल</string>
-    <string name="new_password">पासवर्ड</string>
-    <string name="continue1">लॉग इन</string>
+    <string name="phone">फ़ोन नंबर</string>
+    <string name="otp">OTP / ओटीपी </string>
+    <string name="continue1">लॉग इन / साइन अप</string>
     <string name="skip">skip ></string>
     <string name="welcomelang">नमस्ते !</string>
     <string name="Hindi">हिंदी</string>
@@ -33,4 +33,6 @@
     <string name="bangalides">জয় হোক যুবক, জয় হোক কৃষক</string>
     <string name="checkuptext">क्या आपकी फसल ठीक है</string>
     <string name="sol">समाधान</string>
+    <string name="imgtxt">जाँच से पहले फोटो अपलोड करें</string>
+    <string name="logout">LogOut</string>
 </resources>

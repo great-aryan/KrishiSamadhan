@@ -53,99 +53,108 @@
 
 
     <TextView
-        android:id="@+id/welcometext"
+        android:id="@+id/welcome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/welcome"
         android:layout_marginTop="20dp"
         android:textColor="@color/black"
         android:textSize="35sp"
-        app:layout_constraintBottom_toTopOf="@id/fab_google"
+        app:layout_constraintBottom_toTopOf="@id/phone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/whitesapce"
         app:layout_constraintVertical_bias="0.04"
         />
 
-    <ImageButton
-        android:id="@+id/fab_google"
-        android:layout_width="200dp"
-        android:layout_height="40dp"
-        android:contentDescription="@string/todo"
-        android:elevation="20dp"
-        android:foreground="@drawable/google_hindi"
-        app:layout_constraintBottom_toTopOf="@id/or"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/welcometext"
-        app:tint="@null" />
-    <View
-        android:layout_width="150dp"
-        android:layout_height="1dp"
-        android:background="@color/grey"
-        app:layout_constraintBottom_toTopOf="@+id/email"
+<!--    <ImageButton-->
+<!--        android:id="@+id/signInWithGoogle"-->
+<!--        android:layout_width="200dp"-->
+<!--        android:layout_height="40dp"-->
+<!--        android:contentDescription="@string/todo"-->
+<!--        android:elevation="20dp"-->
+<!--        android:foreground="@drawable/google_hindi"-->
+<!--        app:layout_constraintBottom_toTopOf="@id/or"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/fab_google"-->
+<!--        app:tint="@null" />-->
+<!--    <View-->
+<!--        android:layout_width="150dp"-->
+<!--        android:layout_height="1dp"-->
+<!--        android:background="@color/grey"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/email"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/whitesapce"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/or"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/fab_google" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/or"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="@string/or"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:textSize="18sp"-->
+<!--        app:layout_constraintBottom_toTopOf="@id/email"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/fab_google"-->
+<!--        />-->
+
+<!--    <View-->
+<!--        android:layout_width="150dp"-->
+<!--        android:layout_height="1dp"-->
+<!--        android:background="@color/grey"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/email"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/whitesapce"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/or"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/fab_google" />-->
+    <com.hbb20.CountryCodePicker
+        android:id="@+id/ccp"
+        android:layout_width="115dp"
+        android:layout_height="43dp"
+        app:layout_constraintBottom_toTopOf="@+id/continue1"
+        app:layout_constraintEnd_toStartOf="@+id/phone"
         app:layout_constraintStart_toStartOf="@+id/whitesapce"
-        app:layout_constraintEnd_toEndOf="@+id/or"
-        app:layout_constraintTop_toBottomOf="@+id/fab_google" />
-
-    <TextView
-        android:id="@+id/or"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/or"
-        android:textColor="@color/black"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@id/email"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/fab_google"
-        />
-
-    <View
-        android:layout_width="150dp"
-        android:layout_height="1dp"
-        android:background="@color/grey"
-        app:layout_constraintBottom_toTopOf="@+id/email"
-        app:layout_constraintEnd_toEndOf="@+id/whitesapce"
-        app:layout_constraintStart_toEndOf="@+id/or"
-        app:layout_constraintTop_toBottomOf="@+id/fab_google" />
+        app:layout_constraintTop_toBottomOf="@+id/welcome" />
     <EditText
-        android:id="@+id/email"
+        android:id="@+id/phone"
         android:layout_width="260dp"
         android:layout_height="wrap_content"
         android:background="@drawable/edit_text_bg"
-        android:hint="@string/email"
+        android:hint="@string/phone"
         android:importantForAutofill="no"
-        android:inputType="textEmailAddress"
+        android:inputType="phone"
         android:paddingStart="20dp"
         android:paddingTop="10dp"
         android:paddingEnd="20dp"
         android:paddingBottom="10dp"
-        app:layout_constraintBottom_toTopOf="@id/password"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/or"
-        app:layout_constraintWidth_percent=".8" />
-
-    <EditText
-        android:id="@+id/password"
-        android:layout_width="260dp"
-        android:layout_height="wrap_content"
-        android:background="@drawable/edit_text_bg"
-        android:hint="@string/new_password"
-        android:importantForAutofill="no"
-        android:inputType="textPassword"
-        android:paddingLeft="20dp"
-        android:paddingTop="10dp"
-        android:paddingRight="20dp"
-        android:paddingBottom="10dp"
+        app:layout_constraintHorizontal_bias="0.8"
         app:layout_constraintBottom_toTopOf="@id/continue1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/email"
-        app:layout_constraintVertical_bias="0.02"
-        app:layout_constraintWidth_percent=".8"
-        app:passwordToggleEnabled="true" />
+        app:layout_constraintTop_toBottomOf="@+id/welcome"
+        app:layout_constraintWidth_percent=".8" />
+
+<!--    <EditText-->
+<!--        android:id="@+id/otp"-->
+<!--        android:layout_width="260dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:background="@drawable/edit_text_bg"-->
+<!--        android:hint="@string/otp"-->
+<!--        android:importantForAutofill="no"-->
+<!--        android:inputType="numberPassword"-->
+<!--        android:paddingLeft="20dp"-->
+<!--        android:paddingTop="10dp"-->
+<!--        android:paddingRight="20dp"-->
+<!--        android:paddingBottom="10dp"-->
+<!--        app:layout_constraintBottom_toTopOf="@id/continue1"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/phone"-->
+<!--        app:layout_constraintVertical_bias="0.02"-->
+<!--        app:layout_constraintWidth_percent=".8"-->
+<!--        app:passwordToggleEnabled="true" />-->
 
     <Button
         android:id="@+id/continue1"
@@ -160,7 +169,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/whitesapce"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password"
+        app:layout_constraintTop_toBottomOf="@+id/phone"
         app:layout_constraintWidth_percent=".8" />
 
 

@@ -3,6 +3,8 @@ package com.phoenix.krishisamadhan;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -18,17 +20,16 @@ public class MainActivity extends AppCompatActivity {
         if (getSupportActionBar() != null) {
             getSupportActionBar().hide();
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
-
         }
 
 
         new Handler().postDelayed(() -> {
             //This method will be executed once the timer is over
             // Start your app main activity
-            Intent i = new Intent(MainActivity.this, LanguageActivity.class);
+            Intent i = new Intent(MainActivity.this, LoginActivity.class);
             startActivity(i);
             // close this activity
             finish();
-        }, 1600);
+        }, 1500);
     }
 }
