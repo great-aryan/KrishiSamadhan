@@ -156,31 +156,4 @@
 
 
 
-  <Button
-      android:id="@+id/aryan"
-      android:layout_width="140dp"
-      android:layout_height="wrap_content"
-      android:layout_below="@id/result"
-      android:layout_centerHorizontal="true"
-      android:textSize="18sp"
-      android:text="@string/sol"
-      />
-
-  <TextView
-      android:id="@+id/solu"
-      android:layout_width="match_parent"
-      android:layout_height="80dp"
-      android:layout_below="@id/aryan"
-      android:layout_marginStart="20dp"
-      android:layout_marginTop="20dp"
-      android:layout_marginEnd="20dp"
-      android:layout_marginBottom="20dp"
-      android:background="@drawable/border2"
-      android:paddingStart="15dp"
-      android:paddingEnd="15dp"
-      android:textColor="@color/black"
-      android:textSize="20sp" />
-
-
-
 </RelativeLayout>

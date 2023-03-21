@@ -31,8 +31,8 @@ import java.nio.ByteBuffer;
 
 public class DiagnoseActivity extends AppCompatActivity {
 
-    Button camera, predictbtn, aryan, gallery, btn;
-    TextView result, imgtxt, solu;
+    Button camera, predictbtn, gallery, btn;
+    TextView result, imgtxt;
     ImageView imageObj;
     Bitmap bitmap;
 
@@ -54,10 +54,8 @@ public class DiagnoseActivity extends AppCompatActivity {
 
         gallery = findViewById(R.id.gallery);
         predictbtn = findViewById(R.id.predictbtn);
-        aryan = findViewById(R.id.aryan);
         camera = findViewById(R.id.camera);
         result = findViewById(R.id.result);
-        solu = findViewById(R.id.solu);
         imageObj = findViewById(R.id.imageObj);
         imgtxt = findViewById(R.id.imgtxt);
         int counter = 2;
@@ -90,14 +88,6 @@ public class DiagnoseActivity extends AppCompatActivity {
             throw new RuntimeException(e);
         }
 
-
-        aryan.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                solu.setText("परिणाम : "+labels);
-
-            }
-        });
 
 
         gallery.setOnClickListener(new View.OnClickListener() {
